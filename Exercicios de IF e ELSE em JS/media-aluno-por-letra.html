@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <label for="num1">Digite a primeira nota:</label>
+        <input type="number" name="" id="num1">
+        <br><br>
+        <label for="num2">Digite a segunda nota:</label>
+        <input type="number" name="" id="num2">
+        <br><br>
+        <input type="button" value="Média" onclick="clicar()">
+
+        <script>
+
+            function clicar(){
+
+                var n1 = Number(document.getElementById('num1').value)
+                var n2 = Number(document.getElementById('num2').value)
+                var media = (n1 + n2)/2
+
+                if(media >= 9 && media <=10){
+                    alert(`PRIMEIRA NOTA: ${n1} 
+                           SEGUNDA NOTA: ${n2} 
+                           MÉDIA: ${media} 
+                           CONCEITO: A 
+                           APROVADO !!!`)
+
+                } else if(media >= 7.5 && media < 9){
+                    alert(`PRIMEIRA NOTA: ${n1} 
+                           SEGUNDA NOTA: ${n2} 
+                           MÉDIA: ${media} 
+                           CONCEITO: B 
+                           APROVADO !!!`)
+
+                } else if(media >= 6 && media < 7.5){
+                    alert(`PRIMEIRA NOTA: ${n1} 
+                           SEGUNDA NOTA: ${n2} 
+                           MÉDIA: ${media}
+                           CONCEITO: C 
+                           APROVADO !!!`)
+
+                } else if(media >= 4 && media < 6){
+                    alert(`PRIMEIRA NOTA: ${n1} 
+                           SEGUNDA NOTA: ${n2}
+                           MÉDIA: ${media} 
+                           CONCEITO: D 
+                           REPROVADO !!!`)
+
+                }else{
+                    alert(`PRIMEIRA NOTA: ${n1} 
+                           SEGUNDA NOTA: ${n2} 
+                           MÉDIA: ${media} 
+                           CONCEITO: E 
+                           REPROVADO !!!`)
+                }
+
+            }
+
+        </script>
+
+</body>
+</html>

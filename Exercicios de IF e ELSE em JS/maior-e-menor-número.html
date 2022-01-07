@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="num1">Digite um numero inteiro:</label>
+    <input type="number" name="" id="num1">
+    <br> <br>
+    <label for="num2">Digite outro número inteiro:</label>
+    <input type="number" name="" id="num2">
+    <br> <br>
+    <label for="num3">Digite mais um nnúmero inteiro:</label>
+    <input type="number" name="" id="num3">
+    <br> <br>
+    <input type="button" value="Maior Núm." onclick="maior()">
+    <input type="button" value="Menor Núm." onclick="menor()">
+
+    <script>
+        function maior() {
+            var n1 = Number(document.getElementById('num1').value)
+            var n2 = Number(document.getElementById('num2').value)
+            var n3 = Number(document.getElementById('num3').value)
+
+            var maior = n1
+
+            if(n2 > maior){
+                maior = n2
+            } else if(n3 > maior){
+                maior = n3
+            }
+
+            alert(`Maior: ${maior}`)
+        }
+
+
+
+        function menor() {
+            var n1 = Number(document.getElementById('num1').value)
+            var n2 = Number(document.getElementById('num2').value)
+            var n3 = Number(document.getElementById('num3').value)
+
+            var menor = n1
+
+            if(n2 < menor){
+                menor = n2
+            } else if(n3 < menor){
+                menor = n3
+            }
+
+            alert(`Menor: ${menor}`)
+        }
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

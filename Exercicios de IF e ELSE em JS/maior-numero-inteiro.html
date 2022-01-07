@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="num1">Digite um numero inteiro:</label>
+    <input type="number" name="" id="num1">
+    <br> <br>
+    <label for="num2">Digite outro número inteiro:</label>
+    <input type="number" name="" id="num2">
+    <br> <br>
+    <label for="num3">Digite mais um nnúmero inteiro:</label>
+    <input type="number" name="" id="num3">
+    <br> <br>
+    <input type="button" value="Verificar" onclick="clicar()">
+
+    <script>
+        function clicar() {
+            var n1 = Number(document.getElementById('num1').value)
+            var n2 = Number(document.getElementById('num2').value)
+            var n3 = Number(document.getElementById('num3').value)
+
+            if(n1 > n2 && n1 > n3){
+                document.write(`O número ${n1} é maior que os números ${n2} e ${n3}`)
+
+            }else if (n2 > n1 && n2 > n3){
+                document.write(`O número ${n2} é maior que os números ${n1} e ${n3}`)
+
+            }else {
+                document.write(`O número ${n3} é maior que os números ${n1} e ${n2}`)
+            }
+
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        #txtvel{
+            text-align: right;
+            width:50px;
+        }
+        #butao{
+            margin-left: 20px;
+        }   
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h <!--Um espaço onde iremos digitar números. Por isso o type é number.-->
+    <input type="button" value="Calcular" id="butao" onclick="calcular()"><!--Um butão onde iremos interagir clicando, para termos o resultado do primeiro input. O parametro "value" é oque estara escrito no botão. E colocamos um ação "onclick" chamada calcular. -->
+    <div id="res"> <!--Uma div onde aparecera o resultado-->
+
+    </div>    
+    <script>
+        function calcular() {
+            var txtv = window.document.getElementById('txtvel')//Aqui estamos fazendo uma ponte usando o ID do primeiro input e jogando o resultado dentro de uma nova variavel chamada "txtv".
+            var res = window.document.getElementById('res')//Aqui também estamos fazendo uma ponte usando o ID da div la em cima e jogando dentro de uma vaiavel chamada "res". 
+            var vel = Number(txtv.value)//Aqui estamos convertento o tipo de string para um número inteiro ou real 
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} Km/h</strong></p>`//Aqui estamos mostrando a velocidade em que o carro estava utilizando o espaço da div la em cima.
+            if(vel > 60) {//Uma condição somples se inicia aqui.
+                res.innerHTML += '<p>Você foi <strong>MULTADO</strong> por excesso de velocidade.</p>'//Aqui é mostrado oque aconece caso a condição acima seja cumprida. Perceba que usamos o += e não somente o =. Isso porque se ussasemos somente o =, ele iria substituir o res de cima, como colocamos o +=, ele vai manter o res de cima e mostrar esse também.
+
+            }
+            res.innerHTML +='<p>Dirija com cuidado e sempre use o sinto de segurança!</p>'//Aqui é o mesmo caso do res de cima em relação ao +=.
+        }
+    </script>
+
+    
+</body>
+</html>

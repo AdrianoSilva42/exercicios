@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="num1">Digite o dia:</label>
+    <input type="number" name="" id="num1">
+    <br><br>
+    <label for="num2">Digite o mes:</label>
+    <input type="number" name="" id="num2">
+    <br><br>
+    <label for="num3">Digite o ano:</label>
+    <input type="number" name="" id="num3">
+    <br><br>
+    <input type="button" value="Validar" onclick="clicar()">
+    <br><br>
+    <div id="res">Resposta</div>
+
+
+    <script>
+
+        function clicar(){
+
+            var dia = parseInt(document.getElementById('num1').value)
+            var mes = parseInt(document.getElementById('num2').value)
+            var ano = parseInt(document.getElementById('num3').value)
+
+            var res = document.getElementById('res')
+
+            switch(mes){
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+
+                if(dia <= 31){
+                    res.innerHTML = 'Data Valida'
+                
+                }
+                else{
+                    res.innerHTML = 'Data Invalida(mes com mais de 31 dias)'
+                 
+                    break
+                }
+                
+                case 4: case 6: case 9: case 11:
+                
+                if(dia <= 30){
+                    res.innerHTML = 'Data Valida'
+
+                }
+                else{
+                    res.innerHTML = 'Data Invalida(mes com mais de 30 dias)'
+
+                    break
+                }
+
+                case 2:
+                
+                if(( ano % 400 == 0 ) || ( ano % 4 == 0 && ano % 100 != 0 )){
+                 if(dia <= 29){
+                     res.innerHTML = 'Data Valida'
+                 }
+                 else{
+                     res.innerHTML = 'Data Invalida(mes com mais de 29 dias)'
+                     
+                 }
+
+                 
+                }
+                else{
+                    if( dia <= 28){
+                        res.innerHTML = 'Data Valida'
+
+                    }
+                    else{
+                        res.innerHTML = 'Data Invalida(mes com mais de 28 dias)'
+                    }
+                }
+
+
+            }
+
+
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="num1">Digite um número de 1 a 7 para saber seu equivalente dia da semana: </label>
+    <input type="number" name="" id="num1">
+    <br><br>
+    <input type="button" value="Verificar" onclick="clicar()">
+
+    <script>
+
+        function clicar(){
+            var n1 = Number(document.getElementById('num1').value)
+
+            if(n1 == 1){
+                alert('1 - Domingo')
+            
+            } else if(n1 == 2){
+                alert('2 - Segunda-feira')
+
+            } else if(n1 == 3){
+                alert('3 - Terça-feira')
+
+            } else if(n1 == 4){
+                alert('4 - Quarta-feira')
+
+            } else if(n1 == 5){
+                alert('5 - Quinta-feira')
+
+            } else if(n1 == 6){
+                alert('6 - Sexta-feira')
+
+            } else if(n1 == 7){
+                alert('7 - Sabado')
+
+            } else{
+                alert('VALOR INVALIDO !!!')
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

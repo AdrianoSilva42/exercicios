@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(109, 109, 228);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo !!</h1>
+    <p>Me livrei da maldição....</p>
+    <script>
+        //Nessas duas primeiras Var, pedimos pra o usuario digitir um número, então o JS converter oque foi digitado para um número(inteiro ou real) e o resultado é guardado dentro da variavel n1 e n2.
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        //Nessa linha a variavel 's' recebe a soma de n1 e n2
+        var s = n1 + n2
+        //Aqui uma janela de alerta se abrira mostrando a variavel 's' com as somas de n1 e n2. Aqui foi usado o placeholder ${} para mostrar as variaveis n1, n2 e s, ao inves da concatenação. As duas formas servem, porém dessa forma acredito ser menos complicado.
+        window.alert(`A soma entre ${n1} e ${n2} é igual a: ${s}`)
+        
+    </script>
+       
+</body>
+</html>

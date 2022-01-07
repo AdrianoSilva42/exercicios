@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos DOM</title>
+    <style>
+        #area{
+            font: normal 20pt Arial;
+            background: rgb(32, 216, 32);
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id='area' onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--Aqui colocamos 3 eventos, o onclick, onmouseenter e o onmouseout. Assim que esses comandos forem executados, a ação ocorrera.-->
+        Interaja...
+
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area') //Pra ação ocorrer, precisamos colocar essa variavel dentro de cada "functin" ou do lado de fora(do jeito que essa esta), pois assim ela servira para todas as functions. Pórem nenhum desses dois metodos é o aconselhavel. Só estamos fazendo assim pra demonstrar como funciona o Evento.
+
+        //Essa é uma forma de conseguir o mesmo resultado que obtivemos colocando as 3 ações dentro da tag de abertura div. E é a mais aconselhavel também, porque assim não bagunçamos o codigo HTML com propriedades JS.
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        //Ação que muda o nome dentro da caixa para 'Clicou!' quando clicarmos com o mouse dentro da caixa e muda a cor para vermelho.
+        function clicar(){
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+
+        //Ação que muda o nome dentro da caixa para 'Entrou' quando colocarmos o cursor do mouse dentro da caixa e muda a cor para amarelo.
+        function entrar(){
+            a.innerText = 'Entrou!'
+            a.style.background = 'yellow'
+        }
+
+        //Ação que muda o nome dentro da caixa para 'Saiu!' quando tirarmos o cursor do mouse de dentro da caixa e muda a cor para verde de volta.
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome ?')
+        document.write(`Olá ${nome}, seu nome tem ${nome.length} letras. <br>`)//Ao invés de abrir uma nova janela para mostrar a menagem, usamos o 'document.write' para mostrar a mensagem no corpo da pagina, aqui usamos o placeholder ${} mais uma vez também. O <br> perto do parentese de fechamento do document.write serve para dar uma quebra de linha, para isso ocorrer ele deve ser colocado antes do final da crase de fechamento. E fazemos mostrar quantos caracteres tem a string na variavel nome.
+        document.write(`Seu nome em maisculo ficaria assim: ${nome.toUpperCase()} <br>`)//Nessa linha transformamos o conteudo da variavel nome em letras maisculas.
+        document.write(`Seu nome em minusculo fica assim também: ${nome.toLowerCase()}`)//Aqui tramsformamos em minusculas.
+    </script>
+    
+</body>
+</html>

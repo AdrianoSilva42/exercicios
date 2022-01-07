@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="num1">Informe uma nota:</label>
+    <input type="number" name="" id="num1">
+    <br><br>
+    <input type="button" value="Verificar" onclick="clicar()">
+    <br><br>
+    <div id="res">Resposta</div>
+
+
+    <script>
+        function clicar(){
+
+            var n1 = Number(document.getElementById('num1').value)
+            var cont = 0
+            var res = document.getElementById('res')
+
+
+
+            if(n1 < 0 || n1 > 10){
+                alert('NOTA INVALIDA. TENTE NOVAMENTE !!')
+            
+            }
+            else{
+                while(cont <= n1){
+                    res.innerHTML = ('Nota ' + cont + '. Parabens !! <br/>')
+                    cont++
+                }
+            }
+
+
+
+
+                
+            
+
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

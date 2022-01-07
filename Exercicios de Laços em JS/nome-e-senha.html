@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="txtn1">Digite seu nome:</label>
+    <input type="text" name="" id="txtn1">
+    <br><br>
+    <label for="num1">Digite sua senha:</label>
+    <input type="password" name="" id="num1">
+    <br><br>
+    <input type="button" value="Verificar" onclick="clicar()">
+    <br><br>
+    <div id="res"></div>
+
+    <script>
+
+        function clicar(){
+
+            var txt = document.getElementById(('txt1').value)
+            var n1 = document.getElementById(('num1').value)
+            var res = document.getElementById('res')
+            var cont = 0
+
+            if(txt == n1){
+                alert('SENHA IGUAL AO NOME. DIGITE OUTRA SENHA.')
+
+            }
+            else{
+                while(cont <= 10){
+                    res.innerHTML = 'Nome e senha cadastrados com sucesso !!'
+
+                    cont++
+                    
+                }
+            }
+            
+
+
+        }
+
+    </script>
+
+</body>
+</html>

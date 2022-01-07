@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <hr>
+    <p> REAJUSTE SALARIAL </p>
+    <hr>
+
+        <label for="number1">Digite o seu salario atual:</label>
+        <input type="number" name="" id="number1">
+        <input type="button" value="Calcular" onclick="calcular()">
+
+        <script>
+
+            function calcular(){
+
+                var num1 = Number(document.getElementById('number1').value)
+                var aum = 0
+                var ns = 0
+
+                if(num1 < 280.00){
+                    aum = (1.20*num1) - num1
+                    ns = num1 + aum
+
+                    document.write(`SALARIO ANTES DO REAJUSTE: R$ ${num1} <br><br>
+                           PERCENTUAL DO AUMENTO APLICADO: 20% <br><br>
+                           VALOR DO AUMENTO: R$ ${aum} <br><br>
+                           NOVO SALARIO, APÓS O AUMENTO: R$ ${ns} <br><br>`)
+                }
+
+                if(num1 >= 280.00 && num1 < 700.00){
+                    aum = (1.15*num1) - num1
+                    ns = num1 + aum
+
+                    document.write(`SALARIO ANTES DO REAJUSTE: R$ ${num1} <br><br>
+                           PERCENTUAL DO AUMENTO APLICADO: 15% <br><br>
+                           VALOR DO AUMENTO: R$ ${aum} <br><br>
+                           NOVO SALARIO, APÓS O AUMENTO: R$ ${ns} <br><br>`)
+                }
+
+                if(num1 >= 700.00 && num1 < 1500.00){
+                    aum = (1.10*num1) - num1
+                    ns = num1 + aum
+
+                    document.write(`SALARIO ANTES DO REAJUSTE: R$ ${num1} <br><br>
+                           PERCENTUAL DO AUMENTO APLICADO: 10% <br><br>
+                           VALOR DO AUMENTO: R$ ${aum} <br><br>
+                           NOVO SALARIO, APÓS O AUMENTO: R$ ${ns} <br><br>`)
+                }
+
+                if(num1 > 1500.00){
+                    aum = (1.05*num1) - num1
+                    ns = num1 + aum
+
+                    document.write(`SALARIO ANTES DO REAJUSTE: R$ ${num1} <br><br>
+                           PERCENTUAL DO AUMENTO APLICADO: 5% <br><br>
+                           VALOR DO AUMENTO: R$ ${aum} <br><br>
+                           NOVO SALARIO, APÓS O AUMENTO: R$ ${ns} <br><br>`)
+                }
+
+            }
+
+        </script>
+    
+</body>
+</html>

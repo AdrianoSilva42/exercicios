@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="txtn1">Digite o nome completo do aluno:</label>
+    <input type="text" name="" id="txtn1">
+    <hr>
+    <label for="num1">Digite a 1° nota</label>
+    <input type="number" name="" id="num1">
+    <br> <br>
+    <label for="num2">Digite a 2° nota</label>
+    <input type="number" name="" id="num2">
+    <br> <br>
+    <input type="button" value="Verificar Media" onclick="clicar()">
+
+    <script>
+        function clicar() {
+            var nome = document.getElementById('txtn1').value.toUpperCase().trim()
+            var n1 = Number(document.getElementById('num1').value)
+            var n2 = Number(document.getElementById('num2').value)
+
+            var media = (n1 + n2) / 2
+            
+            if(media >= 7 && media <= 9){
+                document.write(`O aluno ${nome} foi aprovado !!`)
+            
+            } else if (media == 10){
+                document.write(`O aluno ${nome} foi aprovado com distinção !! `)
+
+            } else {
+                document.write(`O aluno ${nome} foi reprovado !!`)
+                
+            }
+
+
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

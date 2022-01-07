@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+            text-align: center;
+        }
+
+        div{
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> + <!--Entrada de dado em valor númerico. O sinal de + tem puro valor estetico para a pagina-->
+    <input type="number" name="txtn2" id="txtn2"> <!--Outra entrada de dado em valor númerico-->
+    <input type="button" value="somar" onclick="somar()"> <!--Um botão com a função de fazer a soma entre os valores -->
+    <div id="res">Resultado</div> <!--Espaço escrito "Resultado" onde sera mostrado o mesmo-->
+
+    <script>
+        function somar(){ //Codigo do evento que tem como ação somar os valores que foram digitados.
+            var tn1 = window.document.getElementById('txtn1') // atribuindo o primeiro input na parte de HTML á variavel tn1.
+            var tn2 = window.document.getElementById('txtn2') //atribuindo o segundo input na parte de HTML á variavel tn2.
+            var res = window.document.getElementById('res') //atribuindo a div na parte de HTML á variavel res
+            var n1 = Number(tn1.value) //Convertendo o valor no 1° input para um número inteiro ou real. Depende do valor que sera digitado.
+            var n2 = Number(tn2.value) //Convertendo o valor no 2° input para um número inteiro ou real. Depende do valor que sera digitado.
+            var s = n1 + n2 //Atribuindo a soma dos doisvalores a uma variavel "s".
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>` //Aqui sera feita a troca do que esta escrito na div na parte de HTML. Onde estava escrito "Resposta", sera escrito oque estiver entre as crases(´´). Lembrando que o placeholder ${} só funciona se estiver escrito entre crases, não vai funciona se estiver entre aspas.
+        }
+    </script>
+    
+</body>
+</html>

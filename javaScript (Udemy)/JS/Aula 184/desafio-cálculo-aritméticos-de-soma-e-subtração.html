@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var n1 = prompt('Digite um número:')
+        var op = prompt('Selecione entre "SOMA" e "SUBTRAÇÃO" escrevendo na caixa abaixo: ')
+        var n2 = prompt('Digite um outro número:')
+        var oper = toLowerCase(op)
+        
+
+        function calc (n1, oper, n2){
+
+            n1 = parseFloat(n1)
+            n2 = parseFloat(n2)
+
+            var res = 0
+
+            if(oper == 'soma'){
+                res = n1 + n2 
+            } else if(oper == 'subtração'){
+                 res = n1 - n2
+            }
+            return res
+                
+        }
+
+        var res = calc(n1, oper, n2)
+        
+        document.write(`O resultado da ${oper} entre ${n1} e ${n2} é igual a ${res}`)
+
+
+    </script>
+    
+</body>
+</html>

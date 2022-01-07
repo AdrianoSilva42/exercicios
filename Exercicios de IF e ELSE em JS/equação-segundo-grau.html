@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="num1">Informe o valor de "a":</label>
+    <input type="number" name="" id="num1">
+    <br><br>
+    <label for="num2">Informe o valor de "b":</label>
+    <input type="number" name="" id="num2">
+    <br><br>
+    <label for="num3">Informe o valor de "c":</label>
+    <input type="number" name="" id="num3">
+    <br><br>
+    <input type="button" value="Calcular" onclick="clicar()">
+    <br><br>
+
+    <div id="res"></div>
+
+
+    <script>
+
+        function clicar(){
+
+            var a = Number(document.getElementById('num1').value)
+            var b = Number(document.getElementById('num2').value)
+            var c = Number(document.getElementById('num3').value)
+            var res = document.getElementById('res')
+
+            var del = (b*b) - (4*a*c)
+
+            if(del > 0){
+
+                raiz1 = (- b + Math.sqrt(del)) / (2*a)
+                raiz2 = (- b - Math.sqrt(del)) / (2*a)
+
+                res.innerHTML = `Raiz 1: ${raiz1} <br/> Raiz 2: ${raiz2}`
+            
+            } else{
+
+                if(del == 0){
+
+                    raiz = (- b + Math.sqrt(del)) / (2*a)
+
+                    res.innerHTML = `Raiz dupla: ${raiz}`
+
+                }else{
+
+                    real = (-b)/(2*a)
+                    img1 = Math.sqrt(-del)/(2*a)
+                    img2 = -Math.sqrt(-del)/(2*a)
+
+                    res.innerHTML = `Raiz 1: ${real} + ${img1} <br/>
+                                     Raiz 2: ${real} + ${img2} i`
+
+                }
+
+            }
+
+        
+    
+    
+    
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

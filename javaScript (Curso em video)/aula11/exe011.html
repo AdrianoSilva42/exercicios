@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        #txtnome{
+            width: 80px;
+        }
+
+        #butao{
+            margin-left: 10px;
+        }
+
+        #res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Escreva aqui seu pais de origem: <input type="text" name="txtnome" id="txtnome"><!--Caixa de texto onde sera escrito pais de origem-->
+    <input type="button" value="Verificar" id="butao" onclick="clicar()"><!--Butão onde iremos clicar para termos o resultado-->
+    <div id="res"> <!--Espaço onde sera escrito o resultado-->
+
+    </div>
+
+    <script>
+        function clicar() {//Inicio da função que esta atrelado com o input 'Button'.
+            var nome = window.document.getElementById('txtnome').value.toLowerCase();//Criamdo uma ponte com o input da caixa de texto e jogando seu conteudo em uma variavel. E colocando todo o texto em letras minusculas com o 'toLowerCase();', para que caso o usuario digite com letras maisculas, não de problemas na hora de de reconhecer a condição. E o .value vai "dar" o valor que foi fornecido pelo usuario nesse input.
+            var res = window.document.getElementById('res')//Criando uma ponte com a div e jogando o resultado dentro de uma variavel. 
+           
+            if(nome == 'brasil'){//Condição composta.
+                res.innerHTML += '<p>Você é Brasileiro</p>' //Resultado caso a condição acima seja verdadeira.
+            }
+            else{
+                res.innerHTML += '<p>Você é estrangeiro</p>' //Resultado caso a condição acima seja falsa.
+            }
+            }      
+        
+
+    </script>
+    
+</body>
+</html>

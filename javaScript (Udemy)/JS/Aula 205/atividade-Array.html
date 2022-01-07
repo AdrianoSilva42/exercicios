@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" name="texto" id="texto">
+        <input type="button" value="Adicionar">
+        <input type="button" value="Organizar">
+
+        <script>
+        function addObj(){
+            var obj = document.getElementById('texto').value
+
+            if(obj != ''){
+
+             if(obj.indexOf(obj)!== -1){
+
+             } else {
+                 obj.push(obj)
+                 console.log(obj)
+
+                 document.getElementById('obj').value = ''
+             }   
+            } else {
+                alert('Informe um objeto')
+            }
+
+        }
+
+        function ordenarObj(){
+            obj.sort()
+            console.log(obj)
+        }
+
+
+        
+
+        
+        
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="exe02.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+
+    </header>
+
+    <section>
+        <div>
+            <p>
+                Ano de Nascimento: 
+                <input type="number" name="txtano" id="txtano"min="1900" max="2022"><!--Entrada e dados do tipo número-->
+            </p>
+
+            <p>
+                Sexo:
+                <input type="radio" name="radsex" id="masc" checked><!--Aqui temos um imput do tipo de marcar a opção, muito utilizado quando vamos escolher o sexo em formularios. O parametro "Checked" vai manter marcado o sexo em que ele estivre, nesse caso o masculino.-->
+                <label for="masc">Masculino</label><!--O label é como uma legenda(ou conhecido como etiqueta também) para itens de input. Nesse caso, a palavra "Masculino", vai estar escrita do lado do input "radio" para indicar qual é aquela opção. Ele é muito usado em elementos de radio(mas pode ser usado com muitos outros inputs) pois permite que selecionamos a opção não so clicando na "bolinha", mas também no nome que á acompanha, que nesse caso é o nome "Masculino".-->
+                
+                <input type="radio" name="radsex" id="femi">
+                <label for="femi">Feminino</label>
+            </p>
+
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()"><!--O botão onde sera clicado quando terminar de preencher os dados. O parametro "onclick='verificar()'" vai fazer uma ligação direta com uma "function" no arquivo JS. -->
+            </p>
+        </div>
+
+        <div id="res"> <!--Essa div ira servir como um espaço onde aparecera a resposta dos dados que foram preenchidos. -->
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvovlvido por Adriano Silva</p>
+    </footer>
+
+    <script src="exe02.js">//Ligação com o documento JS.
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        Digite <br> " M " para Matutino <br> " V " para Vespertino <br> " N " para Noturno
+
+    </p>
+   
+    <label for="text1">Em qual turno você estuda ?: </label>
+    <input type="text" name="" id="text1">
+    <input type="button" value="Enviar" onclick="clicar()">
+
+    <script>
+
+        function clicar(){
+
+            var txt1 = document.getElementById('text1').value.toUpperCase().trim()
+
+            if(txt1 == 'M'){
+                alert('BOM DIA !!')
+            
+            } else if(txt1 == 'V'){
+                alert('BOA TARDE !!')
+               
+            } else if(txt1 == 'N'){
+                alert('BOA NOITE !!')
+
+            } else {
+                alert('VALOR INVALIDA')
+
+            }    
+
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
